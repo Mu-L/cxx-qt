@@ -20,6 +20,8 @@ To access the methods of a base class in Rust, use the `#[inherit]` macro.
 It can be placed in front of a function in a `extern "RustQt"` block in a `#[cxx_qt::bridge]`.
 
 ```rust,ignore
+{{#include ../../../examples/qml_features/rust/src/custom_base_class.rs:book_base_include}}
+
 {{#include ../../../examples/qml_features/rust/src/custom_base_class.rs:book_inherit_qalm}}
 
 {{#include ../../../examples/qml_features/rust/src/custom_base_class.rs:book_inherit_qalm_impl_unsafe}}
@@ -58,6 +60,8 @@ This way methods can be overridden, declared as `virtual` or `final`.
 The example below overrides the [`data`](https://doc.qt.io/qt-6/qabstractitemmodel.html#data) method inherited from the `QAbstractListModel`.
 
 ```rust,ignore
+{{#include ../../../examples/qml_features/rust/src/custom_base_class.rs:book_base_include}}
+
 {{#include ../../../examples/qml_features/rust/src/custom_base_class.rs:book_inherit_qalm}}
 
 {{#include ../../../examples/qml_features/rust/src/custom_base_class.rs:book_inherit_data_signature}}
@@ -75,6 +79,8 @@ In this case the base class version of the function must get a different name be
 Example:
 
 ```rust,ignore
+{{#include ../../../examples/qml_features/rust/src/custom_base_class.rs:book_base_include}}
+
 {{#include ../../../examples/qml_features/rust/src/custom_base_class.rs:book_inherit_qalm}}
 
 {{#include ../../../examples/qml_features/rust/src/custom_base_class.rs:book_inherit_qalm_impl_safe}}
